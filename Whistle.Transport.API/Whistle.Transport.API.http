@@ -1,0 +1,6 @@
+@Whistle.Transport.API_HostAddress = http://localhost:5260
+
+GET {{Whistle.Transport.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
