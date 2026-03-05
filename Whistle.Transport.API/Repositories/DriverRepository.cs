@@ -4,25 +4,24 @@ using Whistle.Transport.API.Models;
 
 namespace Whistle.Transport.API.Repositories
 {
-    public class RideRepository
+    public class DriverRepository
     {
         private readonly AppDbContext _context;
 
-        public RideRepository(AppDbContext context)
+        public DriverRepository(AppDbContext context)
         {
             _context = context;
         }
-        //get all rides
-        public async Task<List<Ride>> GetAllRides()
+
+        public async Task<List<Driver>> GetAllDrivers()
         {
-            return await _context.Rides.ToListAsync();
+            return await _context.Drivers.ToListAsync();
         }
-        //Add ride
-        public async Task<Ride> AddRide(Ride ride)
+        public async Task<Driver> AddDriver(Driver driver)
         {
-            _context.Rides.Add(ride);
+            _context.Drivers.Add(driver);
             await _context.SaveChangesAsync();
-            return ride;
+            return driver;
         }
     }
 }

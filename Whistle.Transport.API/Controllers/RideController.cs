@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Whistle.Transport.API.DTOs;
 using Whistle.Transport.API.Services;
 
 namespace Whistle.Transport.API.Controllers
@@ -19,7 +20,7 @@ namespace Whistle.Transport.API.Controllers
             return Ok(rides);
         }
         [HttpPost("book")]
-        public async Task<IActionResult> BookRide(DTOs.RideRequestDto request)
+        public async Task<IActionResult> BookRide(RideRequestDto request)
         {
             var ride = await _rideService.BookRide(request);
             return Ok(ride);

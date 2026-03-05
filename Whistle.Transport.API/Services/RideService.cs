@@ -12,7 +12,7 @@ namespace Whistle.Transport.API.Services
             _repository = rideRepository;
         }
 
-        public async Task<List<Models.Ride>> GetAllRides()
+        public async Task<List<Ride>> GetAllRides()
         {
             return await _repository.GetAllRides();
         }

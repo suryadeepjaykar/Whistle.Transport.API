@@ -13,5 +13,6 @@ namespace Whistle.Transport.API.Data
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
         public DbSet<Ride> Rides { get; set; }
+        public DbSet<Driver> Drivers { get; set; }
     }
 }

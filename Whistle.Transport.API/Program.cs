@@ -17,6 +17,12 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<RideRepository>();
 builder.Services.AddScoped<RideService>();
+builder.Services.AddScoped<EmployeeRepository>();
+builder.Services.AddScoped<EmployeeService>();
+builder.Services.AddScoped<VehicleRepository>();
+builder.Services.AddScoped<VehicleService>();
+builder.Services.AddScoped<DriverRepository>();
+builder.Services.AddScoped<DriverService>();
 
 var app = builder.Build();
 
