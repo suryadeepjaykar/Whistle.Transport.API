@@ -17,7 +17,7 @@ namespace Whistle.Transport.API.Controllers
         public async Task<IActionResult> GetAllDrivers() 
         {
             var drivers = await _driverService.GetAllDrivers();
-                        return Ok(drivers);
+            return Ok(drivers);
         }
         [HttpPost]
         public async Task<IActionResult> AddDriver(AddDriverDto req)

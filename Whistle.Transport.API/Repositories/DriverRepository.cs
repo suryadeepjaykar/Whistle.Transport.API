@@ -23,5 +23,9 @@ namespace Whistle.Transport.API.Repositories
             await _context.SaveChangesAsync();
             return driver;
         }
+        public async Task<Driver> GetAvailableDriver()
+        {
+            return await _context.Drivers.FirstOrDefaultAsync();
+        }
     }
 }

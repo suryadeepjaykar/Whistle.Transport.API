@@ -25,7 +25,8 @@ namespace Whistle.Transport.API.Services
                 EmployeeId = request.EmployeeId,
                 PickupLocation = request.PickupLocation,
                 DropLocation = request.DropLocation,
-                RideTime = DateTime.UtcNow
+                RideTime = DateTime.UtcNow,
+                Status = RideStatus.Booked
             };
 
             return await _repository.AddRide(ride);
